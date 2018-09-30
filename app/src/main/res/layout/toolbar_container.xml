@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:elevation="0dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:minHeight="0dp" app:theme="@style/Toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:orientation="horizontal"
+
+        >
+
+            <com.balysv.materialmenu.MaterialMenuView
+                android:id="@+id/material_menu_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:mm_color="#FFFFFF"
+                app:mm_strokeWidth="2"
+                app:mm_transformDuration="1000"/>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:text="@string/app_name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@android:color/white" android:textStyle="bold"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+</RelativeLayout>
