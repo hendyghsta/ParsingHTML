@@ -8,20 +8,16 @@ import android.support.v4.util.Pair;
 import android.support.v4.view.ViewCompat;
 import android.view.View;
 
-import com.hendyghsta.nonton.R;
-import com.hendyghsta.nonton.data.model.FavHistory;
-import com.hendyghsta.nonton.ui.activity.main.MainActivity;
-import com.hendyghsta.nonton.utils.BitmapUtil;
-import com.hendyghsta.nonton.utils.Const;
-
-import java.util.ArrayList;
+import com.hendyghsta.parsinghtml.R;
+import com.hendyghsta.parsinghtml.common.Const;
+import com.hendyghsta.parsinghtml.ui.activity.MainActivity;
 
 public class Navigator {
 
     public static int ANIM_DURATION = 350;
 
 
-    public static void launchDetailHome(MainActivity fromActivity,String id, View fromView, View backgroundView, int layout) {
+    public static void launchDetailHome(MainActivity fromActivity, String id, View fromView, View backgroundView, int layout) {
         ViewCompat.setTransitionName(fromView, Const.DETAIL_ELEMENT);
         ActivityOptionsCompat options =
                 TransitionHelper.makeOptionsCompat(
@@ -58,19 +54,6 @@ public class Navigator {
                         fromActivity
                 );
         Intent intent = new Intent(fromActivity, MainActivity.class);
-        intent.putExtra(Const.ID, costum);
-        intent.putExtra(Const.FRAGMENT_RES_ID, layout);
-        ActivityCompat.startActivity(fromActivity, intent, options.toBundle());
-        fromActivity.overridePendingTransition(R.anim.slide_up, R.anim.scale_down);
-    }
-
-    public static void launchFragmentPref(MainActivity fromActivity, ArrayList<FavHistory> object, String costum, int layout){
-        ActivityOptionsCompat options =
-                TransitionHelper.makeOptionsCompat(
-                        fromActivity
-                );
-        Intent intent = new Intent(fromActivity, MainActivity.class);
-        intent.putParcelableArrayListExtra(Const.PARCEL,object);
         intent.putExtra(Const.ID, costum);
         intent.putExtra(Const.FRAGMENT_RES_ID, layout);
         ActivityCompat.startActivity(fromActivity, intent, options.toBundle());

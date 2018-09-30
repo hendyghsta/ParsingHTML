@@ -27,6 +27,7 @@ public class Const {
     public static final String ID = "id";
     public static final String FOLDER_FILE = "folder_file";
     public static final int ITEM_VIEW_TYPE = 0;
+    public static final String URL = "https://bioskop45.com";
     public static final int BANNER_AD_VIEW_TYPE = 1;
 
     public static File getParentFile(@NonNull Context context) {

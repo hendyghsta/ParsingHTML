@@ -6,6 +6,8 @@ import android.graphics.Canvas;
 import android.util.LruCache;
 import android.view.View;
 
+import com.hendyghsta.parsinghtml.common.Const;
+
 import java.util.UUID;
 
 

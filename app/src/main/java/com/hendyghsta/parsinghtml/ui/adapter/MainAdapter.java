@@ -8,10 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hendyghsta.nonton.App;
-import com.hendyghsta.nonton.R;
-import com.hendyghsta.nonton.ui.activity.main.MainActivity;
-import com.hendyghsta.nonton.utils.Interstitial;
+import com.hendyghsta.parsinghtml.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -127,12 +124,6 @@ public class MainAdapter<T> extends RecyclerView.Adapter<MainAdapter<T>.ViewHold
         private boolean handleClick(View v, boolean isLongClick) {
             if (onItemClickListener != null) {
                 onItemClickListener.onItemClick(v, items.get(getAdapterPosition()), isLongClick);
-                int clickCount = ((App) context.getApplicationContext()).getClickcount() + 1;
-                ((App)context.getApplicationContext()).setClickcount(clickCount);
-                if (clickCount % 10 != 5)
-                    return true;
-                if (context instanceof MainActivity)
-                    new Interstitial(context);
                 return true;
             }
             return false;

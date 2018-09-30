@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="2dp" app:cardElevation="0dp">
+
+    <RelativeLayout android:id="@+id/item_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" android:orientation="vertical">
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true" android:layout_below="@+id/image_view"
+            android:layout_marginEnd="3dp" android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp" android:ellipsize="end" android:maxLines="2"
+            android:minLines="2" android:text="Title"
+            android:textColor="@color/almostWhite" android:textSize="16sp" android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/qt_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp" android:background="@color/almostWhite"
+            android:padding="3dp" android:textSize="10sp"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
